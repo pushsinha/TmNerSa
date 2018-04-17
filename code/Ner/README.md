@@ -14,5 +14,5 @@
 -For doing the first visualization (Figure 9, Figure 10, Figure 11) to get the top named entities *‘TmNerSa/code/Ner/taggerPy/ner_final.py’* is used with *‘TmNerSa/idata/atags.csv’*(article tags) and *‘TmNerSa/idata/ctags.csv’*(comment tags) as input files.The top entities in articles(Figure 9), comments(Figure 10), as well as the overlapping entities(Figure 11), in these two are displayed. The python file generates an output file *(‘TmNerSa/idata/ne_overlap.csv’)* which contains the overlapping entities in both articles and comments.
 
 -For the second visualization (Figure 12) use *‘TmNerSa/code/Ner/taggerPy/common_author.py’* with *‘TmNerSa/idata/ne_overlap.csv’* as input. This visualization uses 
-plotly as well as **PCA, KMeans** from **SciKit learn** and takes **~5 minutes** to run. It displays the similar authors who mostly use the common entities in their 
+plotly as well as **PCA, KMeans** from **SciKit learn** and takes **~5-7 minutes** to run. It displays the similar authors who mostly use the common entities in their 
 texts. Any number / any type  of entity can be given for any desired visualizations. This visualization exists at *TmNerSa/Vis/author_olap.html*
