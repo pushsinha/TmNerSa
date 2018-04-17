@@ -1,5 +1,5 @@
 
-#TOPIC MODELING:
+# TOPIC MODELING:
 
 Please go to the website and download files from Linguistic Department with all data to work on :
 https://researchdata.sfu.ca/islandora/object/islandora%3A9109
