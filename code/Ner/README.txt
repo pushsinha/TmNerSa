@@ -1,4 +1,4 @@
-Named Entity Recognition
+# Named Entity Recognition
 
 -Files ‘gnm_articles.csv’ and ‘gnm_comments.csv’ were the 2 files used from the corpus.
 
@@ -15,4 +15,4 @@ Named Entity Recognition
 
 -For the second visualization (Figure 12) use ‘TmNerSa/code/Ner/taggerPy/common_author.py’ with ‘TmNerSa/idata/ne_overlap.csv’ as input. This visualization uses 
 plotly as well as PCA, KMeans from SciKit learn. It displays the similar authors who mostly use the common entities in their 
-texts. Any number / any type  of entity can be given for any desired visualizations.
+texts. Any number / any type  of entity can be given for any desired visualizations. This visualization exists at TmNerSa/Vis/author_olap.html
