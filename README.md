@@ -3,6 +3,6 @@
 
 * The  **code** folder contains all the *python* files, **Vis** folder contains the sample *visualizations*, **idata** contains the *intermediate data*, **Slides_for_video** contains the powerpoint presentation used for the video whereas **Misc** folder contains some *miscellaneous files*.
 
-* Please go through separate **README.txt** in the **code's** *subfolders* for further help
+* Please go through separate **README.md** in the **code's** *subfolders* for further help
 
 
