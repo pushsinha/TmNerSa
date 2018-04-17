@@ -9,10 +9,10 @@ Named Entity Recognition
 -Alternatively there exists an NER project at ‘https://github.com/glample/tagger’ which can be used with the existing ‘english’corpora to tag both articles’ and comments’ data. But before using it, make sure a C++ compiler exists in your machine without which the performance will be severely degraded.
 
 -Using the above project we get tagged data as ‘atags.txt’ (article tags) and ‘ctags.txt’ (comments tag). Further, using 
-‘TmNerSa/code/Ner/taggerPy/ner_clean_tab.py’ the generated tagged data is cleaned and kept in the form of csv files ‘TmNerSa/code/Ner/taggerPy/atags.csv’(article tags) and ‘TmNerSa/code/Ner/taggerPy/ctags.csv’(comment tags).
+‘TmNerSa/idata/ner_clean_tab.py’ the generated tagged data is cleaned and kept in the form of csv files ‘TmNerSa/idata/atags.csv’(article tags) and ‘TmNerSa/idata/ctags.csv’(comment tags).
 
--For doing the first visualization (Figure 9, Figure 10, Figure 11) to get the top named entities ‘TmNerSa/code/Ner/taggerPy/ner_final.py’ is used with ‘atags.csv’(article tags) and ‘ctags.csv’(comment tags) as input files.The top entities in articles(Figure 9), comments(Figure 10), as well as the overlapping entities(Figure 11), in these two are displayed. The python file generates an output file (‘TmNerSa/code/Ner/taggerPy/ne_overlap.csv’) which contains the overlapping entities in both articles and comments.
+-For doing the first visualization (Figure 9, Figure 10, Figure 11) to get the top named entities ‘TmNerSa/code/Ner/taggerPy/ner_final.py’ is used with ‘TmNerSa/idata/atags.csv’(article tags) and ‘TmNerSa/idata/ctags.csv’(comment tags) as input files.The top entities in articles(Figure 9), comments(Figure 10), as well as the overlapping entities(Figure 11), in these two are displayed. The python file generates an output file (‘TmNerSa/idata/ne_overlap.csv’) which contains the overlapping entities in both articles and comments.
 
--For the second visualization (Figure 12) use ‘TmNerSa/code/Ner/taggerPy/common_author.py’ with ‘TmNerSa/code/Ner/taggerPy/ne_overlap.csv’ as input. This visualization uses 
+-For the second visualization (Figure 12) use ‘TmNerSa/code/Ner/taggerPy/common_author.py’ with ‘TmNerSa/idata/ne_overlap.csv’ as input. This visualization uses 
 plotly as well as PCA, KMeans from SciKit learn. It displays the similar authors who mostly use the common entities in their 
 texts. Any number / any type  of entity can be given for any desired visualizations.
