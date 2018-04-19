@@ -7,10 +7,10 @@
 - After cleaning, *‘TmNerSa/code/Ner/nltk/ner.py’* can be used to tag the words in the cleaned data. On articles it takes **~2 days** and on comments its has not been checked.This code uses **NLTK (with CoNLL corpus)** to tag the words as entities
 
 - Alternatively there exists an NER project at **_‘https://github.com/glample/tagger’_** which can be used with the existing ‘english’corpora to tag both articles’ and comments’ data.
-e.g. *tagger.py --model models/english/ --input cleaned_input.txt --output atags.txt*
+e.g. After downloading the repository use the command **tagger.py --model models/english/ --input cleaned_input.txt --output atags.txt** to get the tagged *atags.txt* for articles and *ctags.txt* for comments.
 But before using it, make sure a C++ compiler exists in your machine without which the performance will be **severely degraded**.
 
-- Using the above project we get tagged data as ‘atags.txt’ (article tags) and ‘ctags.txt’ (comments tag). Further, using 
+- Using the above project we get tagged the cleaned data as ‘atags.txt’ (article tags) and ‘ctags.txt’ (comments tag). Further, using 
 *‘TmNerSa/idata/ner_clean_tab.py’* the generated tagged data is cleaned and kept in the form of csv files *‘TmNerSa/idata/atags.csv’*(article tags) and *‘TmNerSa/idata/ctags.csv’*(comment tags).
 
 - For doing the first visualization (Figure 9, Figure 10, Figure 11) to get the top named entities *‘TmNerSa/code/Ner/taggerPy/ner_final.py’* is used with *‘TmNerSa/idata/atags.csv’*(article tags) and *‘TmNerSa/idata/ctags.csv’*(comment tags) as input files.The top entities in articles(Figure 9), comments(Figure 10), as well as the overlapping entities(Figure 11), in these two are displayed. The python file generates an output file *(‘TmNerSa/idata/ne_overlap.csv’)* which contains the overlapping entities in both articles and comments.
