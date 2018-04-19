@@ -7,7 +7,7 @@
 - After cleaning, *‘TmNerSa/code/Ner/nltk/ner.py’* can be used to tag the words in the cleaned data. On articles it takes **~2 days** and on comments its has not been checked.This code uses **NLTK (with CoNLL corpus)** to tag the words as entities
 
 - Alternatively there exists an NER project at **_‘https://github.com/glample/tagger’_** which can be used with the existing ‘english’corpora to tag both articles’ and comments’ data.
-e.g. *./tagger.py --model models/english/ --input cleaned_input.txt --output atags.txt*
+e.g. *tagger.py --model models/english/ --input cleaned_input.txt --output atags.txt*
 But before using it, make sure a C++ compiler exists in your machine without which the performance will be **severely degraded**.
 
 - Using the above project we get tagged data as ‘atags.txt’ (article tags) and ‘ctags.txt’ (comments tag). Further, using 
