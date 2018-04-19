@@ -14,7 +14,7 @@ df1 = pd.DataFrame(columns = ['entity', 'tag'])
 df2 = pd.DataFrame(columns = ['entity', 'tag'])
 nor = 0
 
-# from tagger.py entities are tagged word__tag.
+# from tagger.py entities are tagged word__tag (IOB tagging out of which on I and B is considered, O is removed).
 # first regular expression is to remove all entities with '__O' tags while second is to remove non-alphabets.
 regex1 = re.compile('(.+?)__O')
 regex2 = re.compile('[^a-zA-Z]')
