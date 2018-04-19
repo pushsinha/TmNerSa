@@ -18,7 +18,8 @@ def plus3(row):
         return True
     else:
         return False
-
+# 'df1' is entities in articles, 'df2' is entities in comments, 'result' is the overlapped entities in both.
+# The all are pandas dataframes with columns ]entitiy, tag] in the beginning and [entity, tag, count, nametag] later.
 df1 = pd.read_csv('ctags.csv')
 df2 = pd.read_csv('atags.csv')
 df1 = df1[df1.apply(plus3, axis = 1)]
