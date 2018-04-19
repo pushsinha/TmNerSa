@@ -43,7 +43,10 @@ result['nametag'] = result.apply(lambda row: row['entity'] + ',' + row['tag'], a
 result = result.sort_values(['count'], ascending = [False])
 result.to_csv("ne_overlap.csv", index = False)
 
+# selecting top 20 entities
 df1 = df1.head(20)
+
+# selecting 10-20 entities
 labels = df1['nametag'].values[9:]
 sizes = df1['count'].values[9:]
 
