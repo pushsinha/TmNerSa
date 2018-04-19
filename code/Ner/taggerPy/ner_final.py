@@ -46,7 +46,7 @@ result.to_csv("ne_overlap.csv", index = False)
 # selecting top 20 entities
 df1 = df1.head(20)
 
-# selecting 10-20 entities
+# Selecting 11-20 entities. Any different set of antities can be selected for desires further results.
 labels = df1['nametag'].values[9:]
 sizes = df1['count'].values[9:]
 
