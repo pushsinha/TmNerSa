@@ -17,7 +17,11 @@ from sklearn.cluster import KMeans
 import plotly as py
 import plotly.graph_objs as go
 
+# csv with overlapped entities from articles in comments is read.
 result = pd.read_csv("ne_overlap.csv")
+
+# A dataframe is created with first column as author while other 10 columns as the top 11-20 entities.
+# for every author the number of ocurrance of the particluar entity in HIS article is stored in the corresponding cell of his row.
 dfCList = ['author']
 dfCList = dfCList + list(set(result['entity'].values[9:]))
 dfC = pd.DataFrame(columns = dfCList)
@@ -34,10 +38,16 @@ prepDFC.nor = 0
 dfaRaw =  pd.read_csv('../../../../SOCC/raw/gnm_articles.csv')
 dfaRaw = dfaRaw.drop(columns = ['article_id', 'title', 'article_url','published_date','ncomments', 'ntop_level_comments'])
 dfaRaw.apply(prepDFC, axis = 1)
+
+# for every author all his entity occurances are taken except his name for clustering.
 dfC1 = dfC.iloc[:, 1:]
 X = dfC1.values
+
+# since there are many zeros in the cells the 10-column table is converted to 2-column table using PCA.
 pca = PCA(n_components = 2).fit(X)
 pca_2d = pca.transform(X)
+
+# using K-Means to cluster the authors based on the occurance of the top 11-20 entities in THEIR respective articles.
 kmeans = KMeans(init = 'k-means++').fit(pca_2d)
 c = pd.Series(kmeans.labels_)
 temp = []
@@ -65,7 +75,7 @@ c6 = df[df.class1 == 6]
 c7 = df[df.class1 == 7]
 
 
-
+# plotting the clusters using plotly
 data = [
     go.Scatter(
         x=c0['x'].tolist(),
